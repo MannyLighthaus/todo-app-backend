@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: "magnificent-taffy-f46b6c.netlify.app",
+    origin: "magnificent-taffy-f46b6c.netlify.app", // Replace with your actual Netlify frontend URL
     methods: "GET,POST,PUT,DELETE,PATCH",
     allowedHeaders: "Content-Type",
   })
@@ -80,8 +80,7 @@ app.post("/api/todos", async (req, res) => {
 
     res
       .status(201)
-      .json({ message: "Todo created successfully", todo: newTodoItem }); // respond with the newly created todo
-  } catch (error) {
+      .json({ message: "Todo created successfully", todo: newTodoItem }); 
     console.error("Error creating todo:", error); // Log error details
     res.status(500).json({ message: error.message });
   }
