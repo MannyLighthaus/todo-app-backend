@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: "magnificent-taffy-f46b6c.netlify.app", // Replace with your actual Netlify frontend URL
+    origin: "https://your-netlify-app.netlify.app", // Replace with your actual Netlify frontend URL
     methods: "GET,POST,PUT,DELETE,PATCH",
     allowedHeaders: "Content-Type",
   })
