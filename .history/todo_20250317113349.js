@@ -8,18 +8,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // enable CORS for all requests
-// app.use(cors()); // if F.E is on a different PORT, allow CORS
+app.use(cors()); // if F.E is on a different PORT, allow CORS
 
-app.use(
-  cors({
-    origin: [
-      "http://127.0.0.1:5500",
-      "https://magnificent-taffy-f46b6c.netlify.app",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: "magnificent-taffy-f46b6c.netlify.app",
+//     methods: "GET,POST,PUT,DELETE,PATCH",
+//     allowedHeaders: "Content-Type",
+//   })
+// );
 
 // MIDDLEWARE TO PARSE JSON
 // middleware is a function that sits btw the incoming requests from  the clients and the resoponse sent by the server.

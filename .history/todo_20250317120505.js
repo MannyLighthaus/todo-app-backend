@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // enable CORS for all requests
-// app.use(cors()); // if F.E is on a different PORT, allow CORS
+//app.use(cors()); // if F.E is on a different PORT, allow CORS
 
 app.use(
   cors({
