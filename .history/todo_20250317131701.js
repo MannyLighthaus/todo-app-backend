@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: ["https://magnificent-taffy-f46b6c.netlify.app"],
+    origin: [
+      // "http://127.0.0.1:5500",
+      "https://magnificent-taffy-f46b6c.netlify.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type"],
   })
